@@ -26,6 +26,12 @@ function LandFooter() {
               </span>
             </li>
             <span className='text-gray-300 text-3xl'>|</span>
+            <li className="nav-item">
+              <span className="nav-link px-2 text-body-secondary cursor-pointer" onClick={()=>navigate('admin')}>
+                Login as Admin
+              </span>
+            </li>
+            <span className='text-gray-300 text-3xl'>|</span>
           </ul>
           <p className="text-center text-body-secondary">© 2024 College Placement Management System</p>
         </footer>

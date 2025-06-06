@@ -12,21 +12,21 @@ function LandAbout() {
             {/* <h3 className='py-1'>Get Placement</h3> */}
             <div className="flex justify-center flex-col items-center py-1">
               <img src={`${About2}`} alt="Image" className='w-56 md:w-64 border-2 border-black rounded-xl' />
-              <span className='mx-10 max-md:mx-0'>Placement Management System manages student information in the college with regard to placement.</span>
+              <span className='mx-10 max-md:mx-0'>Placement Information System manages student information in the college with regard to placement.</span>
             </div>
           </div>
           <div className='w-10/12 lg:w-1/4 md:w-1/3 h-5/6 bg-opacity-10 shadow-lg shadow-slate-200 bg-red-500 border border-black rounded-lg text-center'>
             <h3 className='py-1'>Get Placement</h3>
             <div className="flex justify-center flex-col items-center py-1">
               <img src={`${About1}`} alt="Image" className='w-56 md:w-64 border-2 border-black rounded-xl' />
-              <span className='mx-10 max-md:mx-0'>Placement Management System is a web App which provides information on placement providers and the placements and also keeps up to date information of all students.</span>
+              <span className='mx-10 max-md:mx-0'>Placement Information System is a web App which provides information on placement providers and the placements and also keeps up to date information of all students.</span>
             </div>
           </div>
           <div className='w-10/12 lg:w-1/4 md:w-1/3 h-5/6 bg-opacity-10 shadow-lg shadow-slate-200 bg-red-500 border border-black rounded-lg text-center'>
             {/* <h3 className='py-1'>Get Placement</h3> */}
             <div className="flex justify-center flex-col items-center py-1">
               <img src={`${About3}`} alt="Image" className='w-56 md:w-64 border-2 border-black rounded-xl' />
-              <span className='mx-10 max-md:mx-0'>Placement Management System can be accessed throughout the college with proper login provided.</span>
+              <span className='mx-10 max-md:mx-0'>Placement Information System can be accessed throughout the college with proper login provided.</span>
             </div>
           </div>
         </div>

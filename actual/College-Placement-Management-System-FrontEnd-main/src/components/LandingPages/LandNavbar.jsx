@@ -10,7 +10,7 @@ function LandingNavbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const [buttonSize, setButtonSize] = useState('lg');
-  const [logoText, setLogoText] = useState('College Placement Management System');
+  const [logoText, setLogoText] = useState('CAREERPATH');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,10 +34,10 @@ function LandingNavbar() {
         setLogoText('CPMS');
       } else if (window.innerWidth <= 768) {
         setButtonSize('md'); // Set size 'sm' for max-md screens
-        setLogoText('College Placement Management System');
+        setLogoText('CAREER PATH');
       } else {
         setButtonSize('lg'); // Set size 'lg' for larger screens
-        setLogoText('College Placement Management System');
+        setLogoText('CAREER PATH');
       }
     };
 

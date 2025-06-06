@@ -5,7 +5,7 @@ import Badge from 'react-bootstrap/Badge';
 import { BASE_URL } from '../../config/config';
 
 function Home() {
-  document.title = 'CPMS | Admin Dashboard';
+  document.title = 'SPIS | Admin Dashboard';
 
   const [countUsers, setCountUsers] = useState({});
   const [loading, setLoading] = useState(true);
