@@ -322,61 +322,67 @@ function App() {
 
 
             {/* all admin routes  */}
-          {/* all admin routes without authentication */}
-<Route element={<Layout header="Dashboard" />}>
-  <Route path="/admin/Dashboard" element={<HomeSuperUser />} />
-</Route>
-<Route element={<Layout header="Management Users" />}>
-  <Route path="/admin/management" element={<ManagementSuperUser />} />
-</Route>
-<Route element={<Layout header="TPO Users" />}>
-  <Route path="/admin/tpo" element={<ListAllTPO />} />
-</Route>
-<Route element={<Layout header="Student Users" />}>
-  <Route path="/admin/student" element={<StudentSuperUser />} />
-</Route>
-<Route element={<Layout header="Approve Student User" />}>
-  <Route path="/admin/approve-student" element={<ApproveStudent />} />
-</Route>
-<Route element={<Layout header="Users" />}>
-  <Route path="/admin/user/:userId" element={<UserDetails />} />
-</Route>
-{/* add new users */}
-<Route element={<Layout header="Create New Student" />}>
-  <Route path="/admin/add-student" element={<AddNewUser />} />
-</Route>
-<Route element={<Layout header="Create New TPO Admin" />}>
-  <Route path="/admin/add-tpo-admin" element={<AddNewUser />} />
-</Route>
-<Route element={<Layout header="Create New Management Admin" />}>
-  <Route path="/admin/add-management-admin" element={<AddNewUser />} />
-</Route>
-{/* company-related */}
-<Route element={<Layout header="All Companys" />}>
-  <Route path="/admin/companys" element={<AllCompany />} />
-</Route>
-<Route element={<Layout header="Add Company Detail" />}>
-  <Route path="/admin/add-company" element={<AddCompany />} />
-</Route>
-<Route element={<Layout header="Edit Company Detail" />}>
-  <Route path="/admin/add-company/:companyId" element={<AddCompany />} />
-</Route>
-{/* job-related */}
-<Route element={<Layout header="Placement Listings" />}>
-  <Route path="/admin/job-listings" element={<AllJobPost />} />
-</Route>
-<Route element={<Layout header="Job Listing" />}>
-  <Route path="/admin/job/:jobId" element={<ViewJobPost />} />
-</Route>
-<Route element={<Layout header="Post New Job" />}>
-  <Route path="/admin/post-job" element={<PostJobTPO />} />
-</Route>
-<Route element={<Layout header="Edit Job Detail" />}>
-  <Route path="/admin/post-job/:jobId" element={<PostJobTPO />} />
-</Route>
+            <Route element={<UserProvider><ProtectedRoute allowedRoles={['superuser']} /></UserProvider>}>
+              <Route element={<Layout header="Dashboard" />}>
+                <Route path="/admin/Dashboard" element={<HomeSuperUser />} />
+              </Route>
+              <Route element={<Layout header="Management Users" />}>
+                <Route path="/admin/management" element={<ManagementSuperUser />} />
+              </Route>
+              <Route element={<Layout header="TPO Users" />}>
+                <Route path="/admin/tpo" element={<ListAllTPO />} />
+              </Route>
+              <Route element={<Layout header="Student Users" />}>
+                <Route path="/admin/student" element={<StudentSuperUser />} />
+              </Route>
+              <Route element={<Layout header="Approve Student User" />}>
+                <Route path="/admin/approve-student" element={<ApproveStudent />} />
+              </Route>
+              <Route element={<Layout header="Users" />}>
+                <Route path="/admin/user/:userId" element={<UserDetails />} />
+              </Route>
+              {/* add new student */}
+              <Route element={<Layout header="Create New Student" />}>
+                <Route path="/admin/add-student" element={<AddNewUser />} />
+              </Route>
+              {/* add new tpo */}
+              <Route element={<Layout header="Create New TPO Admin" />}>
+                <Route path="/admin/add-tpo-admin" element={<AddNewUser />} />
+              </Route>
+              {/* add new management */}
+              <Route element={<Layout header="Create New Management Admin" />}>
+                <Route path="/admin/add-management-admin" element={<AddNewUser />} />
+              </Route>
+              {/* all company */}
+              <Route element={<Layout header="All Companys" />}>
+                <Route path="/admin/companys" element={<AllCompany />} />
+              </Route>
+              {/* add company */}
+              <Route element={<Layout header="Add Company Detail" />}>
+                <Route path="/admin/add-company" element={<AddCompany />} />
+              </Route>
+              {/* update particular company */}
+              <Route element={<Layout header="Edit Company Detail" />}>
+                <Route path="/admin/add-company/:companyId" element={<AddCompany />} />
+              </Route>
+              {/* all jobs post */}
+              <Route element={<Layout header="Placement Listings" />}>
+                <Route path="/admin/job-listings" element={<AllJobPost />} />
+              </Route>
+              {/* view a job post */}
+              <Route element={<Layout header="Job Listing" />}>
+                <Route path="/admin/job/:jobId" element={<ViewJobPost />} />
+              </Route>
+              {/* post jobs */}
+              <Route element={<Layout header="Post New Job" />}>
+                <Route path="/admin/post-job" element={<PostJobTPO />} />
+              </Route>
+              {/* edit post jobs */}
+              <Route element={<Layout header="Edit Job Detail" />}>
+                <Route path="/admin/post-job/:jobId" element={<PostJobTPO />} />
+              </Route>
 
-
-           
+            </Route>
 
             {/* 404 page not found route */}
             <Route path="*" element={<PageNotFound />} />
