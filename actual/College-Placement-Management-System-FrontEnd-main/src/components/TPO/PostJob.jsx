@@ -10,7 +10,7 @@ import ModalBox from '../Modal';
 import { BASE_URL } from '../../config/config';
 
 function PostJob() {
-  document.title = 'CPMS | Post Job';
+  document.title = 'SPIS | Post Job';
   const navigate = useNavigate();
 
   const { jobId } = useParams();

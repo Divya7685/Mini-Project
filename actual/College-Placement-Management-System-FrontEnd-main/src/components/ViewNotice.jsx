@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { BASE_URL } from '../config/config';
 
 function ViewNotice() {
-  document.title = 'CPMS | Notice';
+  document.title = ' | Notice';
   const navigate = useNavigate();
   const noticeId = useParams();
   const [notice, setNotice] = useState({});

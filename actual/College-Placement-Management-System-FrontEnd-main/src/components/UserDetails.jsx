@@ -10,7 +10,7 @@ import Toast from './Toast';
 import { BASE_URL } from '../config/config';
 
 function UserDetails() {
-  document.title = 'CPMS | Complete Profile';
+  document.title = 'SPIS | Complete Profile';
   const navigate = useNavigate();
   const location = useLocation();
 

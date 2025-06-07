@@ -9,7 +9,7 @@ import ModalBox from '../Modal';
 import { BASE_URL } from '../../config/config';
 
 function AddCompany() {
-  document.title = 'CPMS | Add Company';
+  document.title = 'SPIS | Add Company';
   const navigate = useNavigate();
 
   const [loading, setLoading] = useState(true);

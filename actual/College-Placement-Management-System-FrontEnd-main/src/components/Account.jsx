@@ -10,7 +10,7 @@ import Toast from './Toast';
 import { BASE_URL } from '../config/config';
 
 function Account() {
-  document.title = 'CPMS | Account';
+  document.title = 'SPIS | Account';
 
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);

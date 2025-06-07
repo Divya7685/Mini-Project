@@ -8,7 +8,7 @@ import { Button } from 'react-bootstrap';
 import { BASE_URL } from '../../config/config';
 
 function LoginManagement() {
-  document.title = 'CPMS | Management Login';
+  document.title = ' | Management Login';
 
   const navigate = useNavigate();
   const [isLoading, setLoading] = useState(false);

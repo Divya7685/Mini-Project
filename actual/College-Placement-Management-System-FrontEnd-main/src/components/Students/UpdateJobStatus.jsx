@@ -13,7 +13,7 @@ import { PiEyeClosed } from "react-icons/pi";
 import { BASE_URL } from '../../config/config';
 
 function UpdateJobStatus() {
-  document.title = 'CPMS | Update Job Application Status';
+  document.title = 'SPIS | Update Job Application Status';
   const navigate = useNavigate();
 
   const { jobId } = useParams();

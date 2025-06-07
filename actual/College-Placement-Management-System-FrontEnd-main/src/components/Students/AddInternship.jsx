@@ -9,7 +9,7 @@ import ModalBox from '../Modal';
 import { BASE_URL } from '../../config/config';
 
 function AddInternship() {
-  document.title = 'CPMS | Add Internships';
+  document.title = 'SPIS | Add Internships';
   const [loading, setLoading] = useState(true);
   const { internshipId } = useParams();
   const navigate = useNavigate();

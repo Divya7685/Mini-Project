@@ -9,7 +9,7 @@ import { BASE_URL } from '../config/config';
 import { useNavigate } from 'react-router-dom';
 
 function SendNotice() {
-  document.title = 'CPMS | Send Notice';
+  document.title = 'SPIS | Send Notice';
 
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);  // Loading state for initial fetch

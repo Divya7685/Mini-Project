@@ -10,7 +10,7 @@ import { BASE_URL } from '../config/config';
 
 
 function ViewlAllNotice() {
-  document.title = 'CPMS | Notices';
+  document.title = 'SPIS | Notices';
   const [loading, setLoading] = useState(true);
   const [noticesData, setNoticesData] = useState([]);
   const [currentUser, setCurrentUser] = useState({});

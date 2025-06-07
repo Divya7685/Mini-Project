@@ -10,7 +10,7 @@ import { BASE_URL } from '../config/config';
 
 
 function ViewJobPost() {
-  document.title = 'CPMS | View Job Post';
+  document.title = 'SPIS | View Job Post';
   const { jobId } = useParams();
 
   const [data, setData] = useState({});

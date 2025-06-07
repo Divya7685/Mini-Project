@@ -6,7 +6,7 @@ import axios from 'axios';
 import { BASE_URL } from '../config/config';
 
 function ApproveStudent() {
-  document.title = 'CPMS | Approve Students';
+  document.title = 'SPIS | Approve Students';
 
   // student users store here
   const [users, setUsers] = useState([]);

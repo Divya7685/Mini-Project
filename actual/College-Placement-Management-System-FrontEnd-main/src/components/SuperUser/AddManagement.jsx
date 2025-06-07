@@ -6,7 +6,7 @@ import AddUserTable from '../AddUserTable';
 import { BASE_URL } from '../../config/config';
 
 function Management() {
-  document.title = 'CPMS | Management Users';
+  document.title = 'SPIS | Management Users';
 
   // Management users store here
   const [users, setUsers] = useState([]);
