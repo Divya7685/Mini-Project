@@ -10,26 +10,26 @@ function StudentYearAndBranchView() {
 
   const [loading, setLoading] = useState(true);
 
-  const [firstYearComputer, setFirstYearComputer] = useState([]);
-  const [firstYearCivil, setFirstYearCivil] = useState([]);
+  const [firstYearCSE, setFirstYearCSE] = useState([]);
+  const [firstYearIT, setFirstYearIT] = useState([]);
   const [firstYearMechanical, setFirstYearMechanical] = useState([]);
-  const [firstYearAIDS, setFirstYearAIDS] = useState([]);
-  const [firstYearECS, setFirstYearECS] = useState([]);
-  const [secondYearComputer, setSecondYearComputer] = useState([]);
-  const [secondYearCivil, setSecondYearCivil] = useState([]);
+  const [firstYearEEE, setFirstYearEEE] = useState([]);
+  const [firstYearECE, setFirstYearECE] = useState([]);
+  const [secondYearCSE, setSecondYearC] = useState([]);
+  const [secondYearIT, setSecondYearIT] = useState([]);
   const [secondYearMechanical, setSecondYearMechanical] = useState([]);
-  const [secondYearECS, setSecondYearECS] = useState([]);
-  const [secondYearAIDS, setSecondYearAIDS] = useState([]);
-  const [thirdYearComputer, setThirdYearComputer] = useState([]);
-  const [thirdYearCivil, setThirdYearCivil] = useState([]);
+  const [secondYearECE, setSecondYearECE] = useState([]);
+  const [secondYearEEE, setSecondYearEEE] = useState([]);
+  const [thirdYearCSE, setThirdYearCSE] = useState([]);
+  const [thirdYearIT, setThirdYearIT] = useState([]);
   const [thirdYearMechanical, setThirdYearMechanical] = useState([]);
-  const [thirdYearECS, setThirdYearECS] = useState([]);
-  const [thirdYearAIDS, setThirdYearAIDS] = useState([]);
-  const [fourthYearComputer, setFourthYearComputer] = useState([]);
-  const [fourthYearCivil, setFourthYearCivil] = useState([]);
+  const [thirdYearECE, setThirdYearECE] = useState([]);
+  const [thirdYearEEE, setThirdYearEEE] = useState([]);
+  const [fourthYearCSE, setFourthYearCSE] = useState([]);
+  const [fourthYearIT, setFourthYearIT] = useState([]);
   const [fourthYearMechanical, setFourthYearMechanical] = useState([]);
-  const [fourthYearECS, setFourthYearECS] = useState([]);
-  const [fourthYearAIDS, setFourthYearAIDS] = useState([]);
+  const [fourthYearECE, setFourthYearECE] = useState([]);
+  const [fourthYearEEE, setFourthYearEEE] = useState([]);
 
   const fetchStudentsData = async () => {
     try {
@@ -39,29 +39,29 @@ function StudentYearAndBranchView() {
           'Authorization': `Bearer ${token}`,
         }
       });
-      setFirstYearComputer(response.data.firstYearComputer);
-      setFirstYearCivil(response.data.firstYearCivil);
+      setFirstYearCSE(response.data.firstYearCSE);
+      setFirstYearIT(response.data.firstYearIT);
       setFirstYearMechanical(response.data.firstYearMechanical);
-      setFirstYearECS(response.data.firstYearECS);
-      setFirstYearAIDS(response.data.firstYearAIDS);
+      setFirstYearECE(response.data.firstYearECE);
+      setFirstYearEEE(response.data.firstYearEEE);
 
-      setSecondYearComputer(response.data.secondYearComputer);
-      setSecondYearCivil(response.data.secondYearCivil);
+      setSecondYearCSE(response.data.secondYearCSE);
+      setSecondYearIT(response.data.secondYearIT);
       setSecondYearMechanical(response.data.secondYearMechanical);
-      setSecondYearECS(response.data.secondYearECS);
-      setSecondYearAIDS(response.data.secondYearAIDS);
+      setSecondYearECE(response.data.secondYearECE);
+      setSecondYearEEE(response.data.secondYearEEE);
 
-      setThirdYearComputer(response.data.thirdYearComputer);
-      setThirdYearCivil(response.data.thirdYearCivil);
+      setThirdYearCSE(response.data.thirdYearCSE);
+      setThirdYearIT(response.data.thirdYearIT);
       setThirdYearMechanical(response.data.thirdYearMechanical);
-      setThirdYearECS(response.data.thirdYearECS);
-      setThirdYearAIDS(response.data.thirdYearAIDS);
+      setThirdYearECE(response.data.thirdYearECE);
+      setThirdYearEEE(response.data.thirdYearEEE);
 
-      setFourthYearComputer(response.data.fourthYearComputer);
-      setFourthYearCivil(response.data.fourthYearCivil);
+      setFourthYearCSE(response.data.fourthYearCSE);
+      setFourthYearIT(response.data.fourthYearIT);
       setFourthYearMechanical(response.data.fourthYearMechanical);
-      setFourthYearECS(response.data.fourthYearECS);
-      setFourthYearAIDS(response.data.fourthYearAIDS);
+      setFourthYearECE(response.data.fourthYearECE);
+      setFourthYearEEE(response.data.fourthYearEEE);
 
       // setLoading(false);
     } catch (error) {
@@ -97,11 +97,11 @@ function StudentYearAndBranchView() {
                     {/* 4th year  */}
                     <Accordion.Header>Fourth Year</Accordion.Header>
                     <Accordion.Body>
-                      <Accordion flush defaultActiveKey={['Computer']} className='flex flex-col gap-2'>
-                        <StudentTable branchName={"Computer"} studentData={fourthYearComputer} />
-                        <StudentTable branchName={"Civil"} studentData={fourthYearCivil} />
-                        <StudentTable branchName={"ECS"} studentData={fourthYearECS} />
-                        <StudentTable branchName={"AIDS"} studentData={fourthYearAIDS} />
+                      <Accordion flush defaultActiveKey={['CSE']} className='flex flex-col gap-2'>
+                        <StudentTable branchName={"CSE"} studentData={fourthYearCSE} />
+                        <StudentTable branchName={"IT"} studentData={fourthYearIT} />
+                        <StudentTable branchName={"ECE"} studentData={fourthYearECE} />
+                        <StudentTable branchName={"EEE"} studentData={fourthYearEEE} />
                         <StudentTable branchName={"Mechanical"} studentData={fourthYearMechanical} />
                       </Accordion>
                     </Accordion.Body>
@@ -111,11 +111,11 @@ function StudentYearAndBranchView() {
                     {/* 3rd year  */}
                     <Accordion.Header>Third Year</Accordion.Header>
                     <Accordion.Body>
-                      <Accordion flush defaultActiveKey={['Computer']} className='flex flex-col gap-2'>
-                        <StudentTable branchName={"Computer"} studentData={thirdYearComputer} />
-                        <StudentTable branchName={"Civil"} studentData={thirdYearCivil} />
-                        <StudentTable branchName={"ECS"} studentData={thirdYearECS} />
-                        <StudentTable branchName={"AIDS"} studentData={thirdYearAIDS} />
+                      <Accordion flush defaultActiveKey={['CSE']} className='flex flex-col gap-2'>
+                        <StudentTable branchName={"CSE"} studentData={thirdYearCSE} />
+                        <StudentTable branchName={"IT"} studentData={thirdYearIT} />
+                        <StudentTable branchName={"ECE"} studentData={thirdYearECE} />
+                        <StudentTable branchName={"EEE"} studentData={thirdYearEEE} />
                         <StudentTable branchName={"Mechanical"} studentData={thirdYearMechanical} />
                       </Accordion>
                     </Accordion.Body>
@@ -125,11 +125,11 @@ function StudentYearAndBranchView() {
                     {/* 2nd year  */}
                     <Accordion.Header>Second Year</Accordion.Header>
                     <Accordion.Body>
-                      <Accordion flush defaultActiveKey={['Computer']} className='flex flex-col gap-2'>
-                        <StudentTable branchName={"Computer"} studentData={secondYearComputer} />
-                        <StudentTable branchName={"Civil"} studentData={secondYearCivil} />
-                        <StudentTable branchName={"ECS"} studentData={secondYearECS} />
-                        <StudentTable branchName={"AIDS"} studentData={secondYearAIDS} />
+                      <Accordion flush defaultActiveKey={['CSE']} className='flex flex-col gap-2'>
+                        <StudentTable branchName={"CSE"} studentData={secondYearCSE} />
+                        <StudentTable branchName={"IT"} studentData={secondYearIT} />
+                        <StudentTable branchName={"ECE"} studentData={secondYearECE} />
+                        <StudentTable branchName={"EEE"} studentData={secondYearEEE} />
                         <StudentTable branchName={"Mechanical"} studentData={secondYearMechanical} />
                       </Accordion>
                     </Accordion.Body>
@@ -139,11 +139,11 @@ function StudentYearAndBranchView() {
                     {/* 1st year  */}
                     <Accordion.Header>First Year</Accordion.Header>
                     <Accordion.Body>
-                      <Accordion flush defaultActiveKey={['Computer']} className='flex flex-col gap-2'>
-                        <StudentTable branchName={"Computer"} studentData={firstYearComputer} />
-                        <StudentTable branchName={"Civil"} studentData={firstYearCivil} />
-                        <StudentTable branchName={"ECS"} studentData={firstYearECS} />
-                        <StudentTable branchName={"AIDS"} studentData={firstYearAIDS} />
+                      <Accordion flush defaultActiveKey={['CSE']} className='flex flex-col gap-2'>
+                        <StudentTable branchName={"CSE"} studentData={firstYearCSE} />
+                        <StudentTable branchName={"IT"} studentData={firstYearIT} />
+                        <StudentTable branchName={"ECE"} studentData={firstYearECE} />
+                        <StudentTable branchName={"EEE"} studentData={firstYearEEE} />
                         <StudentTable branchName={"Mechanical"} studentData={firstYearMechanical} />
                       </Accordion>
                     </Accordion.Body>

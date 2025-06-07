@@ -25,7 +25,7 @@ const UserDetail = async (req, res) => {
     // student data
     studentProfile: {
       rollNumber: `${req.user.studentProfile.rollNumber}`,
-      uin: `${req.user.studentProfile.UIN}`,
+      // uin: `${req.user.studentProfile.UIN}`,
       department: `${req.user.studentProfile.department}`,
       year: `${req.user.studentProfile.year}`,
       addmissionYear: `${req.user.studentProfile.addmissionYear}`,
@@ -52,7 +52,7 @@ const UserDetail = async (req, res) => {
           percentage: `${req.user.studentProfile.pastQualification.ssc.percentage}`,
           year: `${req.user.studentProfile.pastQualification.ssc.year}`
         },
-        hsc: {
+        Intermediate: {
           board: `${req.user.studentProfile.pastQualification.hsc.board}`,
           percentage: `${req.user.studentProfile.pastQualification.hsc.percentage}`,
           year: `${req.user.studentProfile.pastQualification.hsc.year}`

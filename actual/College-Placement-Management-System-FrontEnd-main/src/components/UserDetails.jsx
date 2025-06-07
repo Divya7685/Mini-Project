@@ -446,10 +446,10 @@ function UserDetails() {
                                 disabled={!completeProfileReq && currentUserData.role !== 'superuser'}
                               >
                                 <option disabled value="undefined" className='text-gray-400'>Enter Your Department</option>
-                                <option value="Computer">Computer</option>
-                                <option value="Civil">Civil</option>
-                                <option value="ECS">ECS</option>
-                                <option value="AIDS">AIDS</option>
+                                <option value="CSE">CSE</option>
+                                <option value="IT">IT</option>
+                                <option value="ECE">ECE</option>
+                                <option value="EEE">EEE</option>
                                 <option value="Mechanical">Mechanical</option>
                               </Form.Select>
                             </FloatingLabel>
@@ -801,11 +801,11 @@ function UserDetails() {
                                 disabled={!completeProfileReq && currentUserData.role !== 'superuser'}
                               >
                                 <option disabled value="undefined" className='text-gray-400'>Enter Your Diploma University Name</option>
-                                <option value="Computer">Computer</option>
-                                <option value="Civil">Civil</option>
+                                <option value="CSE">CSE</option>
+                                <option value="IT">IT</option>
                                 <option value="Mechanical">Mechanical</option>
-                                <option value="ECS">ECS</option>
-                                <option value="AIDS">AIDS</option>
+                                <option value="ECE">ECE</option>
+                                <option value="EEE">EEE</option>
                                 <option value="Other">Other</option>
                               </Form.Select>
                             </FloatingLabel>
