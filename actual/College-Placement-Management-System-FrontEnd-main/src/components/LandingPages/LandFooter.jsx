@@ -33,7 +33,7 @@ function LandFooter() {
             </li>
             <span className='text-gray-300 text-3xl'>|</span>
           </ul>
-          <p className="text-center text-body-secondary">© 2024 College Placement Management System</p>
+          <p className="text-center text-body-secondary">© 2025 Student Placement Information System</p>
         </footer>
       </div>
     </>
