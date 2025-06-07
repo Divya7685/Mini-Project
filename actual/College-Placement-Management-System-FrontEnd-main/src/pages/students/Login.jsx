@@ -8,7 +8,7 @@ import { Button } from 'react-bootstrap';
 import { BASE_URL } from '../../config/config';
 
 function Login() {
-  document.title = 'CPMS | Student Login';
+  document.title = 'SPIS | Student Login';
   const navigate = useNavigate();
   const location = useLocation();
 
