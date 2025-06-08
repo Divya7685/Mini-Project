@@ -801,8 +801,11 @@ function UserDetails() {
                                 disabled={!completeProfileReq && currentUserData.role !== 'superuser'}
                               >
                                 <option disabled value="undefined" className='text-gray-400'>Enter Your Diploma University Name</option>
-                                <option value="State Board of Technical Education and Training (SBTET)">State Board of Technical Education and Training (SBTET)</option>
-                                <option value="NoDiploma">No Diploma</option>
+                                <option value="CSE">CSE</option>
+                                <option value="IT">IT</option>
+                                <option value="Mechanical">Mechanical</option>
+                                <option value="ECE">ECE</option>
+                                <option value="EEE">EEE</option>
                                 <option value="Other">Other</option>
                               </Form.Select>
                             </FloatingLabel>
