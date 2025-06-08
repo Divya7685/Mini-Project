@@ -633,7 +633,7 @@ function UserDetails() {
                                 disabled={!completeProfileReq && currentUserData.role !== 'superuser'}
                               >
                                 <option disabled value="undefined" className='text-gray-400'>Enter Your SSC Board Name</option>
-                                <option value="Maharashtra State Board of Secondary and Higher Secondary Education (MSBSHSE)">Maharashtra State Board of Secondary and Higher Secondary Education (MSBSHSE)</option>
+                                <option value="Telangana State Board of Secondary Education (TGBSE)">Telangana State Board of Secondary Education (TGBSE)</option>
                                 <option value="Central Board of Secondary Education (CBSE)">Central Board of Secondary Education (CBSE)</option>
                                 <option value="Council for the Indian School Certificate Examinations (CISCE)">Council for the Indian School Certificate Examinations (CISCE)</option>
                                 <option value="Other">Other</option>
@@ -692,11 +692,11 @@ function UserDetails() {
                           </div>
 
                           <div className="px-2 py-3 flex flex-col gap-2">
-                            <FloatingLabel controlId="floatingSelectHSC" label="HSC Board Name">
+                            <FloatingLabel controlId="floatingSelectHSC" label="Inter Board Name">
                               <Form.Select
-                                aria-label="Floating label select HSC Board"
+                                aria-label="Floating label select Inter Board"
                                 className='cursor-pointer'
-                                name='hscBoard'
+                                name='interBoard'
                                 value={userData?.studentProfile?.pastQualification?.hsc?.board || "undefined"}
                                 onChange={(e) => {
                                   setUserData({
@@ -716,19 +716,19 @@ function UserDetails() {
                                 // required={completeProfileReq}
                                 disabled={!completeProfileReq && currentUserData.role !== 'superuser'}
                               >
-                                <option disabled value="undefined" className='text-gray-400'>Enter Your HSC Board Name</option>
-                                <option value="Maharashtra State Board of Secondary and Higher Secondary Education (MSBSHSE)">Maharashtra State Board of Secondary and Higher Secondary Education (MSBSHSE)</option>
+                                <option disabled value="undefined" className='text-gray-400'>Enter Your Inter Board Name</option>
+                                <option value="Telangana State Board of Intermediate Education (TSBIE)">Telangana State Board of Intermediate Education (TSBIE)</option>
                                 <option value="Central Board of Secondary Education (CBSE)">Central Board of Secondary Education (CBSE)</option>
                                 <option value="Council for the Indian School Certificate Examinations (CISCE)">Council for the Indian School Certificate Examinations (CISCE)</option>
                                 <option value="Other">Other</option>
                               </Form.Select>
                             </FloatingLabel>
-                            <FloatingLabel controlId="floatingHSCMarks" label="HSC Percentage">
+                            <FloatingLabel controlId="floatingInterMarks" label="Inter Percentage">
                               <Form.Control
                                 type="number"
-                                placeholder="HSC Percentage"
-                                name='hscPercentage'
-                                value={userData?.studentProfile?.pastQualification?.hsc?.percentage}
+                                placeholder="Inter Percentage"
+                                name='interPercentage'
+                                value={userData?.studentProfile?.pastQualification?.inter?.percentage}
                                 onChange={(e) => {
                                   setUserData({
                                     ...userData,
@@ -736,8 +736,8 @@ function UserDetails() {
                                       ...userData?.studentProfile,
                                       pastQualification: {
                                         ...userData?.studentProfile?.pastQualification,
-                                        hsc: {
-                                          ...userData?.studentProfile?.pastQualification?.hsc,
+                                        inter: {
+                                          ...userData?.studentProfile?.pastQualification?.inter,
                                           percentage: e.target.value
                                         }
                                       }
@@ -748,12 +748,12 @@ function UserDetails() {
                                 disabled={!completeProfileReq && currentUserData.role !== 'superuser'}
                               />
                             </FloatingLabel>
-                            <FloatingLabel controlId="floatingSelectHSCPassingYear" label="HSC Passing Year">
+                            <FloatingLabel controlId="floatingSelectInterPassingYear" label="Inter Passing Year">
                               <Form.Control
                                 type="number"
-                                placeholder="HSC Passing Year"
-                                name='hscPassingYear'
-                                value={userData?.studentProfile?.pastQualification?.hsc?.year}
+                                placeholder="Inter Passing Year"
+                                name='interPassingYear'
+                                value={userData?.studentProfile?.pastQualification?.inter?.year}
                                 onChange={(e) => {
                                   setUserData({
                                     ...userData,
@@ -761,8 +761,8 @@ function UserDetails() {
                                       ...userData?.studentProfile,
                                       pastQualification: {
                                         ...userData?.studentProfile?.pastQualification,
-                                        hsc: {
-                                          ...userData?.studentProfile?.pastQualification?.hsc,
+                                        inter: {
+                                          ...userData?.studentProfile?.pastQualification?.inter,
                                           year: e.target.value
                                         }
                                       }
@@ -801,11 +801,8 @@ function UserDetails() {
                                 disabled={!completeProfileReq && currentUserData.role !== 'superuser'}
                               >
                                 <option disabled value="undefined" className='text-gray-400'>Enter Your Diploma University Name</option>
-                                <option value="CSE">CSE</option>
-                                <option value="IT">IT</option>
-                                <option value="Mechanical">Mechanical</option>
-                                <option value="ECE">ECE</option>
-                                <option value="EEE">EEE</option>
+                                <option value="State Board of Technical Education and Training (SBTET)">State Board of Technical Education and Training (SBTET)</option>
+                                <option value="NoDiploma">No Diploma</option>
                                 <option value="Other">Other</option>
                               </Form.Select>
                             </FloatingLabel>
