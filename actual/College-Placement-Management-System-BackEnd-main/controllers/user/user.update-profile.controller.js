@@ -63,10 +63,10 @@ const UpdateProfile = async (req, res) => {
           if (req.body.studentProfile.pastQualification.ssc.percentage) user.studentProfile.pastQualification.ssc.percentage = req.body.studentProfile.pastQualification.ssc.percentage;
         }
 
-        if (req.body.studentProfile.pastQualification.inter && req.body.studentProfile.pastQualification.inter.board !== "undefined") {
-          user.studentProfile.pastQualification.inter.board = req.body.studentProfile.pastQualification.inter.board;
-          user.studentProfile.pastQualification.inter.year = req.body.studentProfile.pastQualification.inter.year;
-          user.studentProfile.pastQualification.inter.percentage = req.body.studentProfile.pastQualification.inter.percentage;
+        if (req.body.studentProfile.pastQualification.hsc && req.body.studentProfile.pastQualification.hsc.board !== "undefined") {
+          user.studentProfile.pastQualification.hsc.board = req.body.studentProfile.pastQualification.hsc.board;
+          user.studentProfile.pastQualification.hsc.year = req.body.studentProfile.pastQualification.hsc.year;
+          user.studentProfile.pastQualification.hsc.percentage = req.body.studentProfile.pastQualification.hsc.percentage;
         }
 
         if (req.body.studentProfile.pastQualification.diploma && req.body.studentProfile.pastQualification.diploma.board !== "undefined") {
